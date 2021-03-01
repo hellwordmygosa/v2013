@@ -3,7 +3,30 @@
 
 int main()
 {
-	int day = 0;
+
+	int n = 1;
+	int m = 2;
+	switch (n)
+	{
+	case 1:m++;//M变成 3
+	case 2:n++;//n变成 2
+	case 3:
+		switch (n)
+		{
+		case 1:n++;
+		case 2:m++; n++; break;//,m变成 4  n变成3
+		}
+	case 4:m++;//m变成5，n变成3
+	default:
+		break;
+
+	}
+	printf("n=%d\n m=%d\n", n, m);//最终输出结果 m=5   n=3
+
+
+
+
+	/*int day = 0;
 	scanf("%d",&day);
 
 	switch (day)
@@ -23,7 +46,7 @@ int main()
 		default:
 			printf("输入错误\n");
 			break;
-
+*/
 
 		/*case 1:
 			printf("今天是星期1\n");
@@ -47,7 +70,7 @@ int main()
 			printf("今天是星期7\n");
 			break;*/
 
-	}
+	
 
 
 
